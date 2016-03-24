@@ -1,0 +1,155 @@
+body, input, p {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: "Raleway", Arial, sans-serif;
+	background: #cd4436;
+	width: 400px;
+	height: 250px;
+}
+input {
+	border: none;
+	background: none;
+	font-size: 16px;
+	outline: none;
+}
+a {
+	text-decoration: none;
+	color: #fff;
+}
+a:hover {
+	text-decoration: underline;
+}
+button {
+	cursor: pointer;
+	outline: none
+}
+select {
+	border: none;
+	width: 80px;
+	background: #f9f9f8;
+	height: 22px;
+	font-size: 14px;
+	border-radius: 2px;
+	transition: background 0.3s;
+	outline: none;
+}
+select:focus {
+	background: #fff;
+}
+.clearfix {
+	zoom: 1;
+}
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+#search {
+	width: 340px;
+	padding: 15px;
+	background: rgba(0,0,0,.2);
+	border-radius: 10px;
+	margin: 30px auto;
+	height: 40px;
+}
+#search input {
+	font-size: 18px;
+	font-weight: bold;
+}
+#text {
+	width: 270px;
+	height: 20px;
+	padding: 10px 0 10px 5px;
+	border-radius: 3px 0 0 3px;
+	background: #f9f9f8;
+	transition: background 0.3s;
+	float: left;
+}
+#text:focus {
+	background: #fff;
+}
+#clear {
+	width: 55px;
+	height: 40px;
+	background: #cd4436;
+	color: #f9f9f8;
+	float: left;
+	border-radius: 0 3px 3px 0;
+	cursor: pointer;
+}
+#choices {
+	width: 370px;
+	margin: 0 auto;
+}
+#choices input[type="button"] {
+	width: 146px;
+	border: 3px solid #fff;
+	color: #fff;
+	border-radius: 10px;
+	background: none;
+	padding: 10px 0px;
+	margin: 5px 10px;
+	cursor: pointer;
+	transition: background 0.5s;
+	font-weight: bold;
+}
+#choices input[type="button"]:hover {
+	background: #fff;
+	color: #cd4436;
+}
+
+#choices input[type="text"], #choices button {
+	width: 80px;
+	height: 20px;
+	border: none;
+	border-radius: 0;
+	margin: 0;
+	padding: 0;
+	background: #f9f9f8;
+	transition: background 0.5s;
+	color: #000;
+	text-indent: 6px;
+	border-radius: 2px;
+	color: #aaa;
+}
+#choices input[type="text"]:focus, #choices button:hover {
+	background: #fff;
+}
+
+#left {
+	float: left;
+	width: 185px;
+}
+
+#right {
+	float: right;
+	width: 185px;
+	padding-top: 10px;
+}
+
+#choices #addpassword {
+	width: 165px;
+	height: 35px;
+	margin: 10px 0;
+}
+#choices #password {
+	font-size: 14px;
+}
+#reset, .extra {
+	margin-top: 10px;
+	font-size: 12px;
+}
+#reset {
+	float: right;
+	margin-right: 25px;
+}
+.pixiv {
+	float: left;
+	margin-left: 30px;
+}
+.extra {
+	float: left;
+	margin-right: 10px;
+}
