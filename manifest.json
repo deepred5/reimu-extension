@@ -30,7 +30,7 @@
             "js": ["js/baidu.js"]
         },
         {
-            "matches": ["*://blog.reimu.net/*", "*://www.hacg.li//*"],
+            "matches": ["*://blog.reimu.net/*", "*://www.hacg.li/*"],
             "js": ["js/reimu.js"]
         }
     ]
