@@ -16,6 +16,8 @@ function getTop(index) {
 }
 
 function runToTop(distance) {
+
+	//周六的distance大于scrollTop的最大值，为避免定时器无法清除，限制distance最大值
 	distance = distance > 1900 ? 1900 : distance;
 	currentPosition = document.body.scrollTop;
 	currentPosition += 15;
