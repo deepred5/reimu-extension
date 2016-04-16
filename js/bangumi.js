@@ -16,6 +16,7 @@ function getTop(index) {
 }
 
 function runToTop(distance) {
+	distance = distance > 1900 ? 1900 : distance;
 	currentPosition = document.body.scrollTop;
 	currentPosition += 15;
 
