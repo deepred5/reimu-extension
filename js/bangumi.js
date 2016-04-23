@@ -22,6 +22,7 @@
 		currentPosition = document.body.scrollTop;
 		currentPosition += 15;
 
+		//解决滚动到周六时的bug
 		if (oldPosition === currentPosition) {
 			clearInterval(timer);
 		}
