@@ -22,7 +22,6 @@
 		currentPosition = document.body.scrollTop;
 		currentPosition += 15;
 
-		//滚动条滚动到最低端
 		if (oldPosition === currentPosition) {
 			clearInterval(timer);
 		}
