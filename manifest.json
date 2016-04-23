@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "老司机的工具箱",
-	"version": "2.0.5",
+	"version": "2.0.5.2",
 	"description": "这是个为老司机而做的插件",
 	"icons": {
 		"48": "images/icon48.png", 
