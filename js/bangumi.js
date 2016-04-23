@@ -1,5 +1,5 @@
-
 var currentPosition = 0;
+var oldPosition = 0;
 var timer = null;
 
 function getTop(index) {
@@ -17,10 +17,14 @@ function getTop(index) {
 
 function runToTop(distance) {
 
-	//周六的distance大于scrollTop的最大值，为避免定时器无法清除，限制distance最大值
-	distance = distance > 1700 ? 1700 : distance;
+	oldPosition = currentPosition;
 	currentPosition = document.body.scrollTop;
 	currentPosition += 15;
+
+	//滚动条滚动到最低端
+	if (oldPosition === currentPosition) {
+		clearInterval(timer);
+	}
 
 	if (currentPosition >= distance) {
 		currentPosition = distance;
