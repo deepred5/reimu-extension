@@ -34,7 +34,7 @@
             "js": ["js/reimu.js"]
         },
          {
-            "matches": ["*://www.bilibili.com/video/bgm_calendar.html"],
+            "matches": ["*://bangumi.bilibili.com/anime/timeline"],
             "js": ["js/bangumi.js"]
         }
     ]
