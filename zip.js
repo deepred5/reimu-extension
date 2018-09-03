@@ -1,4 +1,4 @@
-const version = require('./src/manifest.json').version;
+const version = require('./package.json').version;
 const name = require('./package.json').name;
 const zipper = require('zip-local');
 

@@ -1,6 +1,6 @@
 {
   "name": "reimu-extension",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "a chrome extension for reimu website",
   "main": "index.js",
   "scripts": {

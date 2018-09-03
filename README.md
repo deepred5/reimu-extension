@@ -1,4 +1,4 @@
-# 灵梦御所插件
+# 灵梦御所chrome插件
 
 <img src="./src/logo.png" width="100" height="100">
 
