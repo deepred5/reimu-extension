@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+#reimu {
+    width: 280px;
+    max-height: 320px;
+    overflow: auto;
+    background: #e9f2f9;
+    padding: 10px;
+
+    .loading {
+        text-align: center;
+    }
+
+    .article {
+        background: #fff;
+        padding: 10px;
+        box-shadow: 0 0 3px rgba(0,0,0,.25);
+        border-radius: 2px;
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        h4 {
+            font-size: 16px;
+            margin: 10px 0 20px;
+
+            a {
+                text-decoration: none;
+                color: inherit;
+                &:hover {
+                    color: rgba( 34, 49, 63, 0.7);
+                }
+            }
+        }
+        img {
+            max-width: 100%;
+        }
+
+    }
+
+    .content {
+        p {
+            margin-top: 5px;
+        }
+    }
+    
+}
