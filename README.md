@@ -4,7 +4,7 @@
 
 灵梦御所，绅士的幻想乡。
 
-chrome extension
+Chrome extension
 
 [chrome应用商店](https://chrome.google.com/webstore/detail/%E8%80%81%E5%8F%B8%E6%9C%BA%E7%9A%84%E5%B7%A5%E5%85%B7%E7%AE%B1/fpiljkfgljdkhlgogfbanafflmibdloc)
 
