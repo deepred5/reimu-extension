@@ -52,6 +52,7 @@ let config = {
             { from: './src/logo.png', to: path.resolve(__dirname, './dist') },
             { from: './src/manifest.json', to: path.resolve(__dirname, './dist') },
             { from: './src/loading.gif', to: path.resolve(__dirname, './dist') },
+            { from: './src/lazy.png', to: path.resolve(__dirname, './dist') },
         ])
     ]
 }

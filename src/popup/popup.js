@@ -15,6 +15,7 @@ class PopupHelper {
         await this.fetchData();
         this.render();
         this.addHandler();
+        this.lazyLoad();
     }
 
     async fetchData() {
@@ -57,7 +58,7 @@ class PopupHelper {
             `<li class="article">
             <h4><a href=${config.url}>${config.title}</a></h4>
             <div class="content">
-                <img src=${config.img} alt="reimu">
+                <img src="./lazy.png" alt="reimu" data-src=${config.img}>
                 <p>${config.description}</p>
             </div>
         </li>`;
@@ -83,6 +84,27 @@ class PopupHelper {
             }
         })
     }
+
+    lazyLoad() {
+        const intersectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach((item) => {
+                if (item.isIntersecting) {
+                    item.target.src = item.target.dataset.src
+                    intersectionObserver.unobserve(item.target)
+                }
+            })
+          }, {
+              root: this.container.parentNode,
+              rootMargin: "150px 0px",
+            });
+
+        const imgs = document.querySelectorAll('[data-src]')
+        imgs.forEach((item) => {
+            intersectionObserver.observe(item)
+        })
+    }
+    
 }
 
 const popupHelper = new PopupHelper();
+    

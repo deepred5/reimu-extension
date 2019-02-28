@@ -12,13 +12,14 @@ class BackgroundHelper {
     setMagnet(info, tab) {
         const magent = `magnet:?xt=urn:btih:${info.selectionText.toString().trim()}`
         util.clipboard(magent);
-
     }
 
     setBaiduPan(info, tab) {
-        const magent = `https://pan.baidu.com/s/${info.selectionText.toString().trim()}`
+        // 把selectionText自带的/s去掉
+        // 把selectionText开头的/去掉
+        // example: /s/abc  s/abc  /abc   =>  abc
+        const magent = `https://pan.baidu.com/s/${info.selectionText.toString().trim().replace(/(\/?)s\//ig, '').replace(/^\//ig, '')}`
         util.clipboard(magent);
-
     }
 
     pixiv(type, info) {

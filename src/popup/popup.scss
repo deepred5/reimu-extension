@@ -16,6 +16,10 @@ ul, li {
 
     .loading {
         text-align: center;
+
+        img {
+            margin-top: 10px;
+        }
     }
 
     .article {
@@ -40,7 +44,7 @@ ul, li {
             }
         }
         img {
-            max-width: 100%;
+            width: 100%;
         }
 
     }
