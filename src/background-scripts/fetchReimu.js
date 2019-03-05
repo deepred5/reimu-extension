@@ -44,6 +44,7 @@ class FetchReimuHelper {
 
       if (result.lastTitle !== lastTitle) {
         // 有新文章，显示带有红点的icon
+        // browserAction.setIcon使用的图片需要小于128*128，否则报错
         chrome.browserAction.setIcon({
           path: '/message.png'
         });
