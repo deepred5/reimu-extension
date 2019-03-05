@@ -16,11 +16,13 @@
         "tabs",
         "contextMenus",
         "storage",
-        "*://*.reimu.com/*"
+        "*://*.reimu.com/*",
+        "storage"
     ],
     "background": {
         "scripts": [
-            "./bundle/background.js"
+            "./bundle/background.js",
+            "./bundle/fetchReimu.js"
         ]
     },
     "content_scripts": [

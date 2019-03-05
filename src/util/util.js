@@ -14,6 +14,7 @@ export default {
     ajax(config) {
         return new Promise(function (resolve, reject) {
             const req = new XMLHttpRequest();
+            req.timeout = 1000 * 10;
             req.open(config.method, config.url, true);
             req.onload = function () {
                 if (req.status === 200) {

@@ -1,8 +1,6 @@
 import util from '../util/util';
 import cheerio from 'cheerio';
 import '@babel/polyfill';
-
-
 class PopupHelper {
     constructor() {
         this.URL = 'https://blog.reimu.net/feed';
@@ -13,9 +11,23 @@ class PopupHelper {
 
     async init() {
         await this.fetchData();
+        this.updateLastTitle();
         this.render();
         this.addHandler();
         this.lazyLoad();
+    }
+
+    updateLastTitle() {
+        const lastArticle = this.data[0];
+        if (lastArticle && lastArticle.title) {
+            // 关闭带有红点的icon
+            chrome.storage.sync.set({ 'lastTitle': lastArticle.title }, () => {
+                chrome.browserAction.setIcon({
+                    path: '/logo.png'
+                });
+            });
+        }
+
     }
 
     async fetchData() {
@@ -41,7 +53,7 @@ class PopupHelper {
             article = $(article);
             const img = article.find('img').attr('src');
             const description = article.find('description').text();
-            this.data[index].img = img;
+            this.data[index].img = encodeURI(img); // 防止图片url加载失败
             this.data[index].description = description;
         });
 
@@ -58,7 +70,7 @@ class PopupHelper {
             `<li class="article">
             <h4><a href=${config.url}>${config.title}</a></h4>
             <div class="content">
-                <img src="./lazy.png" alt="reimu" data-src=${config.img}>
+                <img src="./lazy.png" alt="reimu" data-src=${config.img} >
                 <p>${config.description}</p>
             </div>
         </li>`;
@@ -82,7 +94,7 @@ class PopupHelper {
             if (target && target.nodeName.toLowerCase() === 'a') {
                 window.open(target.href);
             }
-        })
+        });
     }
 
     lazyLoad() {
@@ -93,9 +105,9 @@ class PopupHelper {
                     intersectionObserver.unobserve(item.target)
                 }
             })
-          }, {
-              root: this.container.parentNode,
-              rootMargin: "150px 0px",
+        }, {
+                root: this.container.parentNode,
+                rootMargin: "150px 0px",
             });
 
         const imgs = document.querySelectorAll('[data-src]');
@@ -103,8 +115,7 @@ class PopupHelper {
             intersectionObserver.observe(item)
         });
     }
-    
+
 }
 
 const popupHelper = new PopupHelper();
-    

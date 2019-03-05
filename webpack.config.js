@@ -9,6 +9,7 @@ let config = {
         popup: './src/popup/popup.js',
         popupCss: './src/popup/popup.scss',
         background: './src/background-scripts/background.js',
+        fetchReimu: './src/background-scripts/fetchReimu.js',
         reimu: './src/content-scripts/reimu.js',
         baidu: './src/content-scripts/baidu.js',
         reimuCss: './src/content-scripts/reimu.scss'
@@ -50,6 +51,7 @@ let config = {
         new CopyWebpackPlugin([
             { from: './src/popup/popup.html', to: path.resolve(__dirname, './dist') },
             { from: './src/logo.png', to: path.resolve(__dirname, './dist') },
+            { from: './src/message.png', to: path.resolve(__dirname, './dist') },
             { from: './src/manifest.json', to: path.resolve(__dirname, './dist') },
             { from: './src/loading.gif', to: path.resolve(__dirname, './dist') },
             { from: './src/lazy.png', to: path.resolve(__dirname, './dist') },
