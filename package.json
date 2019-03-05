@@ -1,6 +1,6 @@
 {
   "name": "reimu-extension",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "a chrome extension for reimu website",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,8 @@
     "reimu",
     "chrome extension",
     "hentai",
-    "old driver"
+    "old driver",
+    "otaku"
   ],
   "author": "deepred5 <948931744@qq.com>",
   "license": "ISC",
