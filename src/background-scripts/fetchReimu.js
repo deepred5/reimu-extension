@@ -36,19 +36,19 @@ class FetchReimuHelper {
 
   showMessageIcon() {
     const lastTitle = this.lastTitle;
+    if (!lastTitle) {
+      return;
+    }
     chrome.storage.sync.get(['lastTitle'], function (result) {
-      // 第一次初始化，还没有本地数据
-      if (!result.lastTitle && lastTitle) {
-        return chrome.storage.sync.set({ 'lastTitle': lastTitle });
-      }
-
-      if (result.lastTitle !== lastTitle) {
-        // 有新文章，显示带有红点的icon
+      // 第一次初始化或有最新文章
+      if (!result.lastTitle || (result.lastTitle !== lastTitle)) {
+        // 显示带有红点的icon
         // browserAction.setIcon使用的图片需要小于128*128，否则报错
-        chrome.browserAction.setIcon({
-          path: '/message.png'
+        chrome.storage.sync.set({ 'lastTitle': lastTitle }, () => {
+          chrome.browserAction.setIcon({
+            path: '/message.png'
+          });
         });
-        chrome.storage.sync.set({ 'lastTitle': lastTitle });
       }
 
     });
