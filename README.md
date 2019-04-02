@@ -1,10 +1,10 @@
-# 灵梦御所chrome插件
+<p align="center">
+  <img src="./src/assets/logo.png" width="100" height="100">
+</p>
+<h3 align="center"><a href="https://blog.reimu.net/">灵梦御所</a></h3>
 
-<img src="./src/logo.png" width="100" height="100">
+> 绅士的幻想乡 Chrome extension
 
-灵梦御所，绅士的幻想乡。
-
-Chrome extension
 
 [chrome应用商店](https://chrome.google.com/webstore/detail/%E8%80%81%E5%8F%B8%E6%9C%BA%E7%9A%84%E5%B7%A5%E5%85%B7%E7%AE%B1/fpiljkfgljdkhlgogfbanafflmibdloc)
 
