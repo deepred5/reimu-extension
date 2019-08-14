@@ -4,6 +4,7 @@ import '@babel/polyfill';
 class PopupHelper {
     constructor() {
         this.URL = 'https://blog.reimu.net/feed';
+        this.reg = /[\u4e00-\u9fa5]|\s/g; 
         this.container = document.querySelector('#reimu ul');
         this.data = [];
         this.init();
@@ -53,7 +54,7 @@ class PopupHelper {
             article = $(article);
             const img = article.find('img').attr('src');
             const description = article.find('description').text();
-            this.data[index].img = encodeURI(img); // 防止图片url加载失败
+            this.data[index].img = this.reg.test(img) ? encodeURI(img) : img; // url中有中文或者空格时需要encodeURI
             this.data[index].description = description;
         });
 
