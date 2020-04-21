@@ -23,12 +23,12 @@ class BackgroundHelper {
     }
 
     pixiv(type, info) {
-        let url = 'https://www.pixiv.net/member_illust.php?mode=medium&illust_id';
+        let url = 'https://www.pixiv.net/artworks';
         if (type === 'member') {
-            url = 'https://www.pixiv.net/member.php?id';
+            url = 'https://www.pixiv.net/users';
         }
 
-        window.open(`${url}=${info.selectionText.toString().trim()}`);
+        window.open(`${url}/${info.selectionText.toString().trim()}`);
     }
 
     createMenu(config) {
